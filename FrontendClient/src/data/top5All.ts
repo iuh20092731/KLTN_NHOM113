@@ -1,0 +1,338 @@
+export const MAINCATEGORIES = {
+    "name": "Thức ăn",
+    "id": 3,
+    "component": "hotel-listing-container",
+    "top5Hot": [
+      {
+        "advertisementId": 3,
+        "mainAdvertisementName": "Chay Sen Vàng",
+        "serviceId": 7,
+        "serviceName": "Ăn uống",
+        "serviceNameNoDiacritics": "anuong",
+        "advertiserId": "569a8c8e-fded-4fdf-bc37-fa314a485514",
+        "adminId": "11d53643-69e6-4b75-955a-fdf62444c719",
+        "adStartDate": "2024-01-01T08:00:00",
+        "adEndDate": "2024-12-31T23:59:59",
+        "clicks": 257,
+        "likes": null,
+        "views": 450,
+        "saved": 0,
+        "shared": 0,
+        "distance": 180,
+        "adStatus": "Active",
+        "reviewNotes": null,
+        "description": "Quán Chay Sen Vàng",
+        "detailedDescription": "Phục vụ các món chay thanh đạm, an toàn và bổ dưỡng. Phục vụ các món chay thanh đạm, an toàn và bổ dưỡng. Phục vụ các món chay thanh đạm, an toàn và bổ dưỡng. Phục vụ các món chay thanh đạm, an toàn và bổ dưỡng.",
+        "address": "Tầng trệt, Chung cư Hưng Ngân, Quận 12, TP HCM",
+        "phoneNumber": "0909876543",
+        "priceRangeLow": 100000,
+        "priceRangeHigh": 300000,
+        "openingHourStart": "09:00:00",
+        "openingHourEnd": "21:00:00",
+        "googleMapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15673.54673949354!2d106.6290053!3d10.8581654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6a49d57661%3A0xcdfc8fe155a45fe8!2zUXXDoW4gVHLDoCBT4buvYSBOaMOgIEzDoG0gw5RORyBIxq9ORw!5e0!3m2!1svi!2s!4v1727315162160!5m2!1svi!2s",
+        "websiteLink": "https://daotaobeptruong.vn/lau-thai-chua-cay",
+        "deliveryAvailable": null,
+        "averageRating": 3,
+        "reviewCount": 1,
+        "mediaList": [
+          {
+            "id": 16,
+            "name": "Bày trí nhẹ nhàng, thanh tịnh",
+            "content": "Không gian thanh tịnh",
+            "url": "https://bizweb.dktcdn.net/100/339/225/files/thuc-an-nhanh.jpg?v=1627638748869",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 17,
+            "name": "Phục vụ nhanh chóng, thân thiện",
+            "content": "Phục vụ thân thiện",
+            "url": "https://bizweb.dktcdn.net/100/339/225/files/thuc-an-nhanh.jpg?v=1627638748869",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 54,
+            "name": "Món ngon thanh đạm",
+            "content": "Đậu hũ chiên",
+            "url": "https://cellphones.com.vn/sforum/wp-content/uploads/2023/09/mon-chay-ngon-de-lam-1.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 55,
+            "name": "Nguyên liệu tươi ngon",
+            "content": "Canh chay",
+            "url": "https://file.hstatic.net/1000341804/file/canh-chay-ngu-sac_dafc5d8509b64f6c82afc1477065ed66_grande.jpeg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 56,
+            "name": "Món ăn vô cùng nổi tiếng",
+            "content": "Cà tím xào",
+            "url": "https://tiki.vn/blog/wp-content/uploads/2023/08/8DLbexQE5KIiDOBbhCUf0Myl39csYt_YRWOInLorMpT-6l-b4bFEwNXhj23bIUfqc9oDSv5f64GuEeMKWtPZIgQe_fm1BeGuTBlZ2GqWo_AMUFNfYo8mFqsVjn7iQe0zzAC_uiAa7dVlxUFLtndk3s.png",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 57,
+            "name": "",
+            "content": "tam",
+            "url": "https://daotaobeptruong.vn/wp-content/uploads/2019/10/mon-chay-ngon.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 58,
+            "name": "",
+            "content": "tam",
+            "url": "https://tiki.vn/blog/wp-content/uploads/2023/08/HBOu-vCAkex_zmYPG_lGLOCJAw01xZ0lZ5BAR5iEy2yhWHR58X6EcaEmPg-w95S2gn2W7JKjU98NroURLOj8LluRQU7vvnoyYXl3ur-d6U1jqJXq-Wzhk9mdVRhGP_UxmfDeTzrYHhE0XyKIFTTbiBc.png",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 59,
+            "name": "",
+            "content": "tam",
+            "url": "https://cdn.nguyenkimmall.com/images/companies/_1/tin-tuc/kinh-nghiem-meo-hay/n%E1%BA%A5u%20%C4%83n/canh-bong-h%E1%BA%B9-n%E1%BA%A5u-n%E1%BA%A5m.jpg.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 60,
+            "name": "",
+            "content": "tam",
+            "url": "https://file.hstatic.net/1000341804/file/cha-gio-chay_09c305fa95c04c709d2789da219037ed_grande.jpeg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 61,
+            "name": "",
+            "content": "tam",
+            "url": "https://storage.googleapis.com/ops-shopee-files-live/live/shopee-blog/2021/04/mon-kho-chay-2.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          }
+        ]
+      },
+      {
+        "advertisementId": 6,
+        "mainAdvertisementName": "Buffet Lẩu Nướng Hưng Phát",
+        "serviceId": 6,
+        "serviceName": "Nhà hàng",
+        "serviceNameNoDiacritics": "nhahang",
+        "advertiserId": "569a8c8e-fded-4fdf-bc37-fa314a485514",
+        "adminId": "11d53643-69e6-4b75-955a-fdf62444c719",
+        "adStartDate": "2024-01-01T08:00:00",
+        "adEndDate": "2024-12-31T23:59:59",
+        "clicks": 182,
+        "likes": null,
+        "views": 400,
+        "saved": 0,
+        "shared": 0,
+        "distance": 0,
+        "adStatus": "Active",
+        "reviewNotes": null,
+        "description": "Buffet Lẩu Nướng Hưng Phát",
+        "detailedDescription": "Buffet với các món nướng, lẩu đa dạng, giá cả hợp lý cho gia đình và nhóm bạn.",
+        "address": "Tầng 3, Chung cư Hưng Ngân, Quận 12, TP HCM",
+        "phoneNumber": "0905432167",
+        "priceRangeLow": 200000,
+        "priceRangeHigh": 600000,
+        "openingHourStart": "18:00:00",
+        "openingHourEnd": "23:30:00",
+        "googleMapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15673.54673949354!2d106.6290053!3d10.8581654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6a49d57661%3A0xcdfc8fe155a45fe8!2zUXXDoW4gVHLDoCBT4buvYSBOaMOgIEzDoG0gw5RORyBIxq9ORw!5e0!3m2!1svi!2s!4v1727315162160!5m2!1svi!2s",
+        "websiteLink": "https://daotaobeptruong.vn/lau-thai-chua-cay",
+        "deliveryAvailable": null,
+        "averageRating": 3,
+        "reviewCount": 1,
+        "mediaList": [
+          {
+            "id": 3,
+            "name": "giat ui",
+            "content": "tam",
+            "url": "https://res.cloudinary.com/tranquanghuyit09/image/upload/v1726406406/ApartmentServices/Banner/hjexk7mwscelkxv5qjv5.webp",
+            "type": "BANNER",
+            "advertisementId": null
+          },
+          {
+            "id": 19,
+            "name": "Món ăn sang trọng, tinh tế",
+            "content": "Ẩm thực đẳng cấp",
+            "url": "https://console.cloudinary.com/pm/c-a59941d1bd45723e665964d7f5a223/media-explorer/ApartmentServices/Image?assetId=e0c0b81ddc02d9ca833b24b0fe15d453",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 20,
+            "name": "Không gian hoàng gia, lịch lãm",
+            "content": "Không gian sang trọng",
+            "url": "https://console.cloudinary.com/pm/c-a59941d1bd45723e665964d7f5a223/media-explorer/ApartmentServices/Image?assetId=a6a250dec5335387d02cfa2dbdfe6686",
+            "type": "IMAGE",
+            "advertisementId": null
+          }
+        ]
+      },
+      {
+        "advertisementId": 9,
+        "mainAdvertisementName": "Ăn Vặt 123",
+        "serviceId": 5,
+        "serviceName": "Thức ăn nhanh",
+        "serviceNameNoDiacritics": "thucannhanh",
+        "advertiserId": "569a8c8e-fded-4fdf-bc37-fa314a485514",
+        "adminId": "11d53643-69e6-4b75-955a-fdf62444c719",
+        "adStartDate": "2024-01-01T08:00:00",
+        "adEndDate": "2024-12-31T23:59:59",
+        "clicks": 182,
+        "likes": null,
+        "views": 400,
+        "saved": 0,
+        "shared": 0,
+        "distance": 0,
+        "adStatus": "Active",
+        "reviewNotes": null,
+        "description": "Quán Ăn Vặt 123",
+        "detailedDescription": "Phục vụ các món ăn vặt cho giới trẻ như xiên que, gỏi cuốn, trà sữa.",
+        "address": "Tầng trệt, Chung cư Hưng Ngân, Quận 12, TP HCM",
+        "phoneNumber": "0912345670",
+        "priceRangeLow": 20000,
+        "priceRangeHigh": 100000,
+        "openingHourStart": "15:00:00",
+        "openingHourEnd": "22:00:00",
+        "googleMapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15673.54673949354!2d106.6290053!3d10.8581654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6a49d57661%3A0xcdfc8fe155a45fe8!2zUXXDoW4gVHLDoCBT4buvYSBOaMOgIEzDoG0gw5RORyBIxq9ORw!5e0!3m2!1svi!2s!4v1727315162160!5m2!1svi!2s",
+        "websiteLink": "https://daotaobeptruong.vn/lau-thai-chua-cay",
+        "deliveryAvailable": null,
+        "averageRating": 4.5,
+        "reviewCount": 0,
+        "mediaList": [
+          {
+            "id": 4,
+            "name": "van tai",
+            "content": "tam",
+            "url": "https://res.cloudinary.com/tranquanghuyit09/image/upload/v1726406406/ApartmentServices/Banner/k71csxkcvwuhwaytkdee.jpg",
+            "type": "BANNER",
+            "advertisementId": null
+          },
+          {
+            "id": 12,
+            "name": "Phục vụ chuyên nghiệp, chu đáo",
+            "content": "Phục vụ tận tình",
+            "url": "https://res.cloudinary.com/tranquanghuyit09/image/upload/v1726406406/ApartmentServices/Banner/pdbmkuuu3pglarurobrb.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 15,
+            "name": "Nguyên liệu tươi ngon, tốt cho sức khỏe",
+            "content": "Nguyên liệu sạch",
+            "url": "https://res.cloudinary.com/tranquanghuyit09/image/upload/v1726406406/ApartmentServices/Banner/pdbmkuuu3pglarurobrb.jpg",
+            "type": "IMAGE",
+            "advertisementId": null
+          }
+        ]
+      },
+      {
+        "advertisementId": 2,
+        "mainAdvertisementName": "Hải Sản Đại Dương",
+        "serviceId": 6,
+        "serviceName": "Nhà hàng",
+        "serviceNameNoDiacritics": "nhahang",
+        "advertiserId": "569a8c8e-fded-4fdf-bc37-fa314a485514",
+        "adminId": "11d53643-69e6-4b75-955a-fdf62444c719",
+        "adStartDate": "2024-01-01T08:00:00",
+        "adEndDate": "2024-12-31T23:59:59",
+        "clicks": 175,
+        "likes": null,
+        "views": 350,
+        "saved": 0,
+        "shared": 0,
+        "distance": 850,
+        "adStatus": "Active",
+        "reviewNotes": null,
+        "description": "Nhà hàng Hải Sản Đại Dương",
+        "detailedDescription": "Quán chuyên phục vụ các món hải sản tươi sống với giá cả hợp lý.",
+        "address": "Tầng trệt, Chung cư Hưng Ngân, Quận 12, TP HCM",
+        "phoneNumber": "0901234567",
+        "priceRangeLow": 150000,
+        "priceRangeHigh": 500000,
+        "openingHourStart": "10:00:00",
+        "openingHourEnd": "22:00:00",
+        "googleMapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15673.54673949354!2d106.6290053!3d10.8581654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6a49d57661%3A0xcdfc8fe155a45fe8!2zUXXDoW4gVHLDoCBT4buvYSBOaMOgIEzDoG0gw5RORyBIxq9ORw!5e0!3m2!1svi!2s!4v1727315162160!5m2!1svi!2s",
+        "websiteLink": "https://daotaobeptruong.vn/lau-thai-chua-cay",
+        "deliveryAvailable": null,
+        "averageRating": 4.9,
+        "reviewCount": 3,
+        "mediaList": [
+          {
+            "id": 2,
+            "name": "do uong",
+            "content": "tam",
+            "url": "https://nguyenlieuantoan.com/assets/upload/news/1677483441_cach-lam-tra-sua-tao-xanh.jpg?v=0.0.3.1",
+            "type": "BANNER",
+            "advertisementId": null
+          },
+          {
+            "id": 46,
+            "name": "Nguyên liệu tươi ngon, sạch sẽ",
+            "content": "Các món chay",
+            "url": "https://bizweb.dktcdn.net/100/339/225/files/thuc-an-nhanh.jpg?v=1627638748869",
+            "type": "IMAGE",
+            "advertisementId": null
+          },
+          {
+            "id": 49,
+            "name": "Nguyên liệu tươi ngon, sạch sẽ",
+            "content": "Các món chay",
+            "url": "https://bizweb.dktcdn.net/100/339/225/files/thuc-an-nhanh.jpg?v=1627638748869",
+            "type": "IMAGE",
+            "advertisementId": null
+          }
+        ]
+      },
+      {
+        "advertisementId": 7,
+        "mainAdvertisementName": "Sushi King",
+        "serviceId": 6,
+        "serviceName": "Nhà hàng",
+        "serviceNameNoDiacritics": "nhahang",
+        "advertiserId": "569a8c8e-fded-4fdf-bc37-fa314a485514",
+        "adminId": "11d53643-69e6-4b75-955a-fdf62444c719",
+        "adStartDate": "2024-01-01T08:00:00",
+        "adEndDate": "2024-12-31T23:59:59",
+        "clicks": 160,
+        "likes": null,
+        "views": 570,
+        "saved": 0,
+        "shared": 0,
+        "distance": 0,
+        "adStatus": "Active",
+        "reviewNotes": null,
+        "description": "Nhà Hàng Nhật Bản Sushi King",
+        "detailedDescription": "Nhà hàng chuyên phục vụ các món sushi và sashimi chuẩn vị Nhật Bản.",
+        "address": "Tầng trệt, Chung cư Hưng Ngân, Quận 12, TP HCM",
+        "phoneNumber": "0918765432",
+        "priceRangeLow": 300000,
+        "priceRangeHigh": 800000,
+        "openingHourStart": "11:00:00",
+        "openingHourEnd": "22:30:00",
+        "googleMapLink": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15673.54673949354!2d106.6290053!3d10.8581654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752b6a49d57661%3A0xcdfc8fe155a45fe8!2zUXXDoW4gVHLDoCBT4buvYSBOaMOgIEzDoG0gw5RORyBIxq9ORw!5e0!3m2!1svi!2s!4v1727315162160!5m2!1svi!2s",
+        "websiteLink": "https://daotaobeptruong.vn/lau-thai-chua-cay",
+        "deliveryAvailable": null,
+        "averageRating": 5,
+        "reviewCount": 13,
+        "mediaList": [
+          {
+            "id": 6,
+            "name": "day lai xe",
+            "content": "tam",
+            "url": "https://res.cloudinary.com/tranquanghuyit09/image/upload/v1726406406/ApartmentServices/Banner/g0bgjo9b9trrsts0auh8.jpg",
+            "type": "BANNER",
+            "advertisementId": null
+          }
+        ]
+      }
+    ]
+  }
+  

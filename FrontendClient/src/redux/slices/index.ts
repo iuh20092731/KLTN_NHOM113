@@ -1,0 +1,18 @@
+import categoriesReducer from './categories'
+import authReducer from './auth'   
+import serviceReducer from './service'
+import advertisementReducer from './advertisement'
+import reviewReducer from './review'
+import faqReducer from './faq'
+import userReducer from './user'
+import foodReducer from './food'
+import visitReducer from './visit'
+import tabReducer from './tabSlice'
+import uploadReducer from './uploadImage'
+import searchReducer from './search'
+import realEstateReducer from './realestate'
+import banner2Reducer from './banner2'
+import linkGroupReducer from './linkGroup'
+import questionsReducer from './question'
+
+export {categoriesReducer, authReducer , serviceReducer , advertisementReducer , reviewReducer , faqReducer , userReducer , foodReducer, visitReducer, tabReducer, uploadReducer, searchReducer, realEstateReducer, banner2Reducer, linkGroupReducer, questionsReducer}

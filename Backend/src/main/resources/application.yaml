@@ -1,0 +1,54 @@
+#server:
+#  port: 8080
+#  servlet:
+#    context-path: /identity
+
+spring:
+#  datasource:
+#    url: ${DBMS_CONNECTION:jdbc:mysql://localhost:3306/identity_service}
+#    driverClassName: "com.mysql.cj.jdbc.Driver"
+#    password: ${DBMS_PASSWORD:root}
+#    username: ${DBMS_USERNAME:root}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 76111991406-k7hts9rftv2f2glsim964mp57ab6gcb5.apps.googleusercontent.com
+            client-secret: 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
+            scope:
+              - email
+              - profile
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+            authorization-grant-type: authorization_code
+        provider:
+          google:
+            authorization-uri: https://accounts.google.com/o/oauth2/auth
+            token-uri: https://oauth2.googleapis.com/token
+            user-info-uri: https://www.googleapis.com/oauth2/v3/userinfo
+
+#  elasticsearch:
+#    rest:
+#      uris: http://localhost:9200
+#    data:
+#      elasticsearch:
+#        repositories:
+#          enabled: true
+
+jwt:
+  signerKey: "1TjXchw5FloESb63Kc+DFhTARvpWL4jUGCwfGWxuG5SIf/1y/LgJxHnMqaF6A/ij"
+  valid-duration: 3600 # in second
+  refreshable-duration: 36000 # in seconds
+
+openapi:
+  service:
+    api-docs: api-service
+    server: http://localhost:8080
+    server-production: https://huyitshop.online
+    title: API Service for DichVuHungNgan.com
+    version: 1.0.0 & 2.0.0

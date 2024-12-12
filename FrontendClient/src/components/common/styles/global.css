@@ -1,0 +1,94 @@
+.scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: #24af24 #f0f0f0;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background-color: #24af24;
+    border-radius: 10px;
+  }
+  
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+  }
+
+  @media (max-width: 1024px) {
+    .scrollbar-custom {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+  
+    .scrollbar-custom::-webkit-scrollbar {
+      display: none; /* Chrome, Safari và Opera */
+    }
+  }
+  
+
+  .typing-indicator {
+    font-size: 1.2em;
+    color: #888;
+    display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+  .typing-indicator span {
+    display: inline-block;
+    opacity: 0;
+    animation: typing-wave 1.5s infinite;
+  }
+  
+  .typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .typing-indicator span:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  
+  .typing-indicator span:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+  
+  @keyframes typing-wave {
+    0% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(0);
+    }
+  }
+  
+  /* hiệu ứng footer icon contact */
+  @keyframes fadeInMove {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .icon-appear {
+    animation: fadeInMove 0.5s ease-out forwards;
+  }
+  .icon-delay-1 {
+    animation-delay: 0.1s;
+  }
+  .icon-delay-2 {
+    animation-delay: 0.2s;
+  }
+  .icon-delay-3 {
+    animation-delay: 0.3s;
+  }

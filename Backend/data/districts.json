@@ -1,0 +1,215 @@
+{
+  "HoChiMinh": {
+    "Quans": {
+      "1": {
+        "id": "1",
+        "name": "Quận 1",
+        "phuongs": [
+          {"id": "1", "name": "Phường Bến Nghé"},
+          {"id": "2", "name": "Phường Bến Thành"},
+          {"id": "3", "name": "Phường Cô Giang"},
+          {"id": "4", "name": "Phường Nguyễn Cư Trinh"},
+          {"id": "5", "name": "Phường Phạm Ngũ Lão"},
+          {"id": "6", "name": "Phường Tân Định"},
+          {"id": "7", "name": "Phường Đa Kao"},
+          {"id": "8", "name": "Phường Nguyễn Thái Bình"}
+        ]
+      },
+      "2": {
+        "id": "2",
+        "name": "Quận 2",
+        "phuongs": [
+          {"id": "1", "name": "Phường An Khánh"},
+          {"id": "2", "name": "Phường An Lợi Đông"},
+          {"id": "3", "name": "Phường Bình An"},
+          {"id": "4", "name": "Phường Bình Khánh"},
+          {"id": "5", "name": "Phường Thủ Thiêm"},
+          {"id": "6", "name": "Phường Tân Phú"},
+          {"id": "7", "name": "Phường Cát Lái"},
+          {"id": "8", "name": "Phường Bình Trưng Đông"},
+          {"id": "9", "name": "Phường Bình Trưng Tây"},
+          {"id": "10", "name": "Phường Thạnh Mỹ Lợi"}
+        ]
+      },
+      "3": {
+        "id": "3",
+        "name": "Quận 3",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"},
+          {"id": "9", "name": "Phường 9"},
+          {"id": "10", "name": "Phường 10"},
+          {"id": "11", "name": "Phường 11"}
+        ]
+      },
+      "4": {
+        "id": "4",
+        "name": "Quận 4",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"}
+        ]
+      },
+      "5": {
+        "id": "5",
+        "name": "Quận 5",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"}
+        ]
+      },
+      "6": {
+        "id": "6",
+        "name": "Quận 6",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"}
+        ]
+      },
+      "7": {
+        "id": "7",
+        "name": "Quận 7",
+        "phuongs": [
+          {"id": "1", "name": "Phường Tân Kiểng"},
+          {"id": "2", "name": "Phường Tân Quy"},
+          {"id": "3", "name": "Phường Bình Thuận"},
+          {"id": "4", "name": "Phường Phú Mỹ"},
+          {"id": "5", "name": "Phường Hưng Gia"},
+          {"id": "6", "name": "Phường Hưng Phú"}
+        ]
+      },
+      "8": {
+        "id": "8",
+        "name": "Quận 8",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"},
+          {"id": "9", "name": "Phường 9"},
+          {"id": "10", "name": "Phường 10"},
+          {"id": "11", "name": "Phường 11"}
+        ]
+      },
+      "9": {
+        "id": "9",
+        "name": "Quận 9",
+        "phuongs": [
+          {"id": "1", "name": "Phường Hiệp Phú"},
+          {"id": "2", "name": "Phường Long Bình"},
+          {"id": "3", "name": "Phường Tăng Nhơn Phú A"},
+          {"id": "4", "name": "Phường Tăng Nhơn Phú B"},
+          {"id": "5", "name": "Phường Phú Hữu"}
+        ]
+      },
+      "10": {
+        "id": "10",
+        "name": "Quận 10",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"},
+          {"id": "9", "name": "Phường 9"},
+          {"id": "10", "name": "Phường 10"}
+        ]
+      },
+      "11": {
+        "id": "11",
+        "name": "Quận 11",
+        "phuongs": [
+          {"id": "1", "name": "Phường 1"},
+          {"id": "2", "name": "Phường 2"},
+          {"id": "3", "name": "Phường 3"},
+          {"id": "4", "name": "Phường 4"},
+          {"id": "5", "name": "Phường 5"},
+          {"id": "6", "name": "Phường 6"},
+          {"id": "7", "name": "Phường 7"},
+          {"id": "8", "name": "Phường 8"},
+          {"id": "9", "name": "Phường 9"},
+          {"id": "10", "name": "Phường 10"}
+        ]
+      },
+      "12": {
+        "id": "12",
+        "name": "Quận 12",
+        "phuongs": [
+          {"id": "1", "name": "Phường Hiệp Thành"},
+          {"id": "2", "name": "Phường Thạnh Lộc"},
+          {"id": "3", "name": "Phường Thới An"},
+          {"id": "4", "name": "Phường Tân Thới Nhất"},
+          {"id": "5", "name": "Phường Tân Chánh Hiệp"},
+          {"id": "6", "name": "Phường An Phú Đông"}
+        ]
+      },
+      "BinhChanh": {
+        "id": "BinhChanh",
+        "name": "Huyện Bình Chánh",
+        "phuongs": [
+          {"id": "1", "name": "Thị trấn Tân Túc"},
+          {"id": "2", "name": "Xã Vĩnh Lộc A"},
+          {"id": "3", "name": "Xã Vĩnh Lộc B"},
+          {"id": "4", "name": "Xã Bình Chánh"},
+          {"id": "5", "name": "Xã Tân Nhựt"},
+          {"id": "6", "name": "Xã Tân Quý Tây"},
+          {"id": "7", "name": "Xã Lê Minh Nhựt"}
+        ]
+      },
+      "HocMon": {
+        "id": "HocMon",
+        "name": "Huyện Hóc Môn",
+        "phuongs": [
+          {"id": "1", "name": "Thị trấn Hóc Môn"},
+          {"id": "2", "name": "Xã Bà Điểm"},
+          {"id": "3", "name": "Xã Đông Thạnh"},
+          {"id": "4", "name": "Xã Nhị Bình"},
+          {"id": "5", "name": "Xã Tân Hiệp"},
+          {"id": "6", "name": "Xã Tân Thới Nhì"}
+        ]
+      },
+      "NhaBe": {
+        "id": "NhaBe",
+        "name": "Huyện Nhà Bè",
+        "phuongs": [
+          {"id": "1", "name": "Thị trấn Nhà Bè"},
+          {"id": "2", "name": "Xã Phú Xuân"},
+          {"id": "3", "name": "Xã Nhơn Đức"},
+          {"id": "4", "name": "Xã Long Thới"},
+          {"id": "5", "name": "Xã Hiệp Phước"}
+        ]
+      }
+    }
+  }
+}
