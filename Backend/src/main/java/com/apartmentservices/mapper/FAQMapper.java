@@ -12,11 +12,15 @@ import com.apartmentservices.models.FAQ;
 @Mapper(componentModel = "spring")
 public interface FAQMapper {
 
-    FAQ toFAQ(FAQCreationRequest request);
+//    FAQ toFAQ(FAQCreationRequest request);
 
     @Mapping(target = "advertisementId", source = "advertisement.advertisementId")
     FAQResponse toFAQResponse(FAQ faq);
 
     @Mapping(target = "advertisement", ignore = true)
     void updateFAQFromRequest(FAQUpdateRequest request, @MappingTarget FAQ faq);
+
+    @Mapping(target = "advertisement.advertisementId", source = "advertisementId") // Map advertisementId từ request sang quan hệ
+    FAQ toFAQ(FAQCreationRequest request);
+
 }

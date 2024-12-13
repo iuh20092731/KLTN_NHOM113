@@ -55,6 +55,7 @@ public enum ErrorCode {
     MAIN_ADVERTISEMENT_CREATION_FAILED(10002, "Failed to create MainAdvertisement", HttpStatus.BAD_REQUEST),
     MAIN_ADVERTISEMENT_UPDATE_FAILED(10003, "Failed to update MainAdvertisement", HttpStatus.BAD_REQUEST),
     MAIN_ADVERTISEMENT_DELETION_FAILED(10004, "Failed to delete MainAdvertisement", HttpStatus.BAD_REQUEST),
+    ADVERTISEMENT_ALREADY_FAVORITED(10005, "Advertisement already favorited", HttpStatus.BAD_REQUEST),
     REVIEW_NOT_FOUND(11001, "Review not found", HttpStatus.NOT_FOUND),
     REVIEW_CREATION_FAILED(11002, "Failed to create Review", HttpStatus.BAD_REQUEST),
     FAQ_NOT_FOUND(12001, "FAQ not found", HttpStatus.NOT_FOUND),

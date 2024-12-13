@@ -24,4 +24,6 @@ public interface FavoriteAdvertisementRepository extends JpaRepository<FavoriteA
     @Query("SELECT MAX(f.seq) FROM FavoriteAdvertisement f")
     Optional<Integer> findMaxSeq();
 
+    boolean existsByAdvertisementIdAndServiceId(Integer advertisementId, Integer serviceId);
+
 }

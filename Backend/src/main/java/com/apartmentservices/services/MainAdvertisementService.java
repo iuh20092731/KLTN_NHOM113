@@ -285,9 +285,9 @@ public class MainAdvertisementService {
 
             // Gửi email đến danh sách Admin
             List<String> adminEmails = List.of(
-                    "dichvuhungngan@gmail.com",
                     "tranquanghuyit09@gmail.com",
-                    "nguyenanhvu200101@gmail.com"
+                    "nguyenanhvu200101@gmail.com",
+                    "nhandep09@gmail.com"
             );
             adminEmails.forEach(email -> emailService.sendEmail(email, subject, body, true));
 

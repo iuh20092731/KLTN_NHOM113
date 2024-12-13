@@ -171,7 +171,7 @@ const ApartmentService: React.FC = () => {
             />
           </svg>
         </CardDataStats> */}
-        <CardDataStats title="Tổng tin đang hoạt động"
+        <CardDataStats title="Tổng quảng cáo"
           total={advertisementStats?.totalActiveAdvertisements}
           rate={advertisementStats?.percentageChangeComparedToPreviousMonth}
           levelUp={advertisementStats?.percentageChangeComparedToPreviousMonth > 0}

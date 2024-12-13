@@ -36,7 +36,7 @@ const Component6: React.FC<Component6Props> = ({ serviceId, serviceName }) => {
   };
 
   if (isLoading || advertisement.length === 0) {
-    return <p>Loading...</p>;
+    return <p></p>;
   }
   return (
     <div className="w-full">

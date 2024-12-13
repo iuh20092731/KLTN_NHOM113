@@ -140,8 +140,18 @@ export default function Header({
     setIsUserMenuOpen(false);
     navigate("/");
     toast({
+      title: "Đăng xuất thành công",
+      description: (
+        <div className="flex items-center">
+          <div className="animate-bounce mr-2">
+            <LogOut className="h-6 w-6 text-white" />
+          </div>
+          Hẹn gặp lại bạn!
+        </div>
+      ),
       variant: "default",
-      description: "Đăng xuất thành công.",
+      duration: 3000,
+      className: "bg-green-500 text-white font-medium rounded-lg shadow-lg",
     });
   };
 
@@ -171,7 +181,7 @@ export default function Header({
         setIsModalOpen(false);
       }
     };
-    
+
     if (isModalOpen) {
       document.addEventListener("mousedown", handleClickOutside);
     }
@@ -209,22 +219,19 @@ export default function Header({
 
   return (
     <header
-      className={`bg-green-500 text-white shadow-lg px-4 md:px-[50px] transition-all duration-300 ${className} ${
-        isMobile ? "fixed top-0 left-0 right-0 z-50" : ""
-      } ${
-        isMobile 
-          ? isSearchVisible 
-            ? "pb-3" 
+      className={`bg-green-500 text-white shadow-lg px-4 md:px-[50px] transition-all duration-300 ${className} ${isMobile ? "fixed top-0 left-0 right-0 z-50" : ""
+        } ${isMobile
+          ? isSearchVisible
+            ? "pb-3"
             : "pb-3"  // Thu nhỏ padding bottom khi ẩn search
           : "pb-3"
-      }`}
+        }`}
     >
       <div className="container mx-auto">
         <div className="flex justify-between items-center py-3 border-b border-green-400">
           <div
-            className={`${
-              isMobile ? "hidden" : "flex"
-            } items-center space-x-4 text-sm`}
+            className={`${isMobile ? "hidden" : "flex"
+              } items-center space-x-4 text-sm`}
           >
             <span className="font-medium">Liên hệ:</span>
             <a
@@ -258,12 +265,11 @@ export default function Header({
             <span>|</span>
             <Link to={"/realestate"} className="hover:text-rose-500">Mua-Bán-Cho Thuê Căn Hộ</Link>
           </div>
-          
+
 
           <button
-            className={`${
-              isMobile ? "block" : "hidden"
-            } text-lg font-bold uppercase flex items-center gap-2`}
+            className={`${isMobile ? "block" : "hidden"
+              } text-lg font-bold uppercase flex items-center gap-2`}
             onClick={() => {
               navigate("/");
               setIsMobileMenuOpen(false);
@@ -272,12 +278,12 @@ export default function Header({
             <img src={Logo} alt="Logo" className="w-8 h-8 rounded-full" />
             Dịch vụ Hưng Ngân
           </button>
-          
+
           <div className="flex items-center space-x-3">
             {!isMobile && (
               <Link
                 to={userInfo ? "/registeradvertisement" : "/login"}
-                onClick={()=>localStorage.setItem("redirectUrl", "/registeradvertisement" )}
+                onClick={() => localStorage.setItem("redirectUrl", "/registeradvertisement")}
                 className="flex items-center w-full p-3  rounded-lg hover:bg-white/20 transition-all duration-200"
               >
                 Đăng ký quảng cáo
@@ -296,16 +302,15 @@ export default function Header({
                       "https://i.pinimg.com/736x/0d/64/98/0d64989794b1a4c9d89bff571d3d5842.jpg"
                     }
                     alt="user"
-                    className="w-7 h-7 rounded-full object-cover aspect-square border border-white"
+                    className="w-9 h-9 rounded-full object-cover aspect-square border-2 border-white shadow-lg hover:scale-110 transition-transform duration-200"
                   />
                 </button>
 
                 <div
-                  className={`absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 overflow-hidden transition-all duration-200 ease-out ${
-                    isUserMenuOpen
-                      ? "opacity-100 translate-y-0"
-                      : "opacity-0 -translate-y-1 pointer-events-none"
-                  }`}
+                  className={`absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg z-10 overflow-hidden transition-all duration-200 ease-out ${isUserMenuOpen
+                    ? "opacity-100 translate-y-0"
+                    : "opacity-0 -translate-y-1 pointer-events-none"
+                    }`}
                 >
                   <button
                     className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 transition-colors duration-150"
@@ -371,84 +376,81 @@ export default function Header({
             )}
           </div>
         </div>
-        
-        <div className={`transition-all duration-300 ease-in-out ${
-          isMobile 
-            ? isMobileMenuOpen 
-              ? 'opacity-100 max-h-[500px]'
-              : 'opacity-0 max-h-0 overflow-hidden' 
-            : 'opacity-100 max-h-[1000px]'
-        }`}>
+
+        <div className={`transition-all duration-300 ease-in-out ${isMobile
+          ? isMobileMenuOpen
+            ? 'opacity-100 max-h-[500px]'
+            : 'opacity-0 max-h-0 overflow-hidden'
+          : 'opacity-100 max-h-[1000px]'
+          }`}>
           {
             !isMobile && (
               <div className="py-4 md:py-6 flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
-            <button 
-              className={`${
-                isMobile ? 'hidden' : 'block'
-              } text-2xl font-bold whitespace-nowrap uppercase flex items-center gap-2`} 
-              onClick={() => navigate('/')}
-            >
-              <img src={Logo} alt="Logo" className="w-24 h-24 rounded-full" />
-              Dịch vụ Hưng Ngân
-            </button>
-            {!isMobile && (
-              <div ref={desktopModalRef} className="relative flex-1 w-full">
-                <input
-                  id="main-search"
-                  type="text"
-                  value={searchQuery}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Tìm kiếm dịch vụ..."
-                  className="w-full py-3 px-6 pr-12 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600 transition"
-                />
-                <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <button
+                  className={`${isMobile ? 'hidden' : 'block'
+                    } text-2xl font-bold whitespace-nowrap uppercase flex items-center gap-2`}
+                  onClick={() => navigate('/')}
+                >
+                  <img src={Logo} alt="Logo" className="w-24 h-24 rounded-full" />
+                  Dịch vụ Hưng Ngân
+                </button>
+                {!isMobile && (
+                  <div ref={desktopModalRef} className="relative flex-1 w-full">
+                    <input
+                      id="main-search"
+                      type="text"
+                      value={searchQuery}
+                      onChange={handleInputChange}
+                      onKeyDown={handleKeyDown}
+                      placeholder="Tìm kiếm dịch vụ..."
+                      className="w-full py-3 px-6 pr-12 rounded-full text-gray-800 focus:outline-none focus:ring-2 focus:ring-green-600 transition"
+                    />
+                    <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
 
-                {isModalOpen && searchQuery.trim() && (
-                  <div className="absolute w-full bg-white shadow-lg rounded-lg mt-2 z-10">
-                    <div className="p-4">
-                      <p className="text-gray-700 mb-2">Có phải bạn muốn tìm dịch vụ</p>
-                      <ul>
-                        {
-                          search.services.map((item: any) => (
-                            <li className="py-2 hover:bg-gray-100 flex items-center">
-                              <img src={item.media[0]?.mediaUrl} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
-                              <Link to={`/${item.categoryNameNoDiacritics}/service/${item.serviceId}`} className="text-blue-600 hover:text-secondary-color" onClick={()=>handleSearchClick()}>{item.serviceName}</Link>
-                            </li>
-                          ))
-                        }
-                      </ul>
-                    </div>
-                    <div className="border-t p-4">
-                      <h4 className="text-gray-800 mb-2">Tiệm gợi ý</h4>
-                      <ul>
-                        {search.advertisements.map((item: any) => (
-                          <li key={item.id} className="flex items-center py-2 hover:bg-gray-100">
-                            <img src={item.mediaList[0]?.url} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
-                            <div>
-                              <Link to={`/${item.categoryNameNoDiacritics}/${item.advertisementId}`} className="text-primary-color hover:text-secondary-color" onClick={()=>handleSearchClick()}>{item.mainAdvertisementName}</Link>
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    {isModalOpen && searchQuery.trim() && (
+                      <div className="absolute w-full bg-white shadow-lg rounded-lg mt-2 z-10">
+                        <div className="p-4">
+                          <p className="text-gray-700 mb-2">Có phải bạn muốn tìm dịch vụ</p>
+                          <ul>
+                            {
+                              search.services.map((item: any) => (
+                                <li className="py-2 hover:bg-gray-100 flex items-center">
+                                  <img src={item.media[0]?.mediaUrl} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
+                                  <Link to={`/${item.categoryNameNoDiacritics}/service/${item.serviceId}`} className="text-blue-600 hover:text-secondary-color" onClick={() => handleSearchClick()}>{item.serviceName}</Link>
+                                </li>
+                              ))
+                            }
+                          </ul>
+                        </div>
+                        <div className="border-t p-4">
+                          <h4 className="text-gray-800 mb-2">Tiệm gợi ý</h4>
+                          <ul>
+                            {search.advertisements.map((item: any) => (
+                              <li key={item.id} className="flex items-center py-2 hover:bg-gray-100">
+                                <img src={item.mediaList[0]?.url} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
+                                <div>
+                                  <Link to={`/${item.categoryNameNoDiacritics}/${item.advertisementId}`} className="text-primary-color hover:text-secondary-color" onClick={() => handleSearchClick()}>{item.mainAdvertisementName}</Link>
+                                </div>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 )}
               </div>
-            )}
-          </div>
             )
           }
         </div>
 
         {isMobile && (
-          <div 
-            ref={mobileModalRef} 
-            className={`relative w-full transition-all duration-300 ${
-              isSearchVisible 
-                ? 'opacity-100 translate-y-0 h-[48px] my-3'
-                : 'opacity-0 -translate-y-full h-0 my-0 overflow-hidden'
-            }`}
+          <div
+            ref={mobileModalRef}
+            className={`relative w-full transition-all duration-300 ${isSearchVisible
+              ? 'opacity-100 translate-y-0 h-[48px] my-3'
+              : 'opacity-0 -translate-y-full h-0 my-0 overflow-hidden'
+              }`}
           >
             <input
               id="main-search"
@@ -470,7 +472,7 @@ export default function Header({
                       search.services.map((item: any) => (
                         <li className="py-2 hover:bg-gray-100 flex items-center">
                           <img src={item.media[0]?.mediaUrl} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
-                          <Link to={`/${item.categoryNameNoDiacritics}/service/${item.serviceId}`} className="text-blue-600 hover:text-secondary-color" onClick={()=>handleSearchClick()}>{item.serviceName}</Link>
+                          <Link to={`/${item.categoryNameNoDiacritics}/service/${item.serviceId}`} className="text-blue-600 hover:text-secondary-color" onClick={() => handleSearchClick()}>{item.serviceName}</Link>
                         </li>
                       ))
                     }
@@ -483,7 +485,7 @@ export default function Header({
                       <li key={item.id} className="flex items-center py-2 hover:bg-gray-100">
                         <img src={item.mediaList[0]?.url} alt={item.mainAdvertisementName} className="w-12 h-12 object-cover rounded-md mr-4" />
                         <div>
-                          <Link to={`/${item.categoryNameNoDiacritics}/${item.advertisementId}`} className="text-primary-color hover:text-secondary-color" onClick={()=>handleSearchClick()}>{item.mainAdvertisementName}</Link>
+                          <Link to={`/${item.categoryNameNoDiacritics}/${item.advertisementId}`} className="text-primary-color hover:text-secondary-color" onClick={() => handleSearchClick()}>{item.mainAdvertisementName}</Link>
                         </div>
                       </li>
                     ))}
@@ -495,13 +497,12 @@ export default function Header({
         )}
 
         <div
-          className={`transition-all duration-300 ease-in-out ${
-            isMobile
-              ? isMobileMenuOpen
-                ? "opacity-100 max-h-[400px] mb-2"
-                : "opacity-0 max-h-0 overflow-hidden"
-              : "opacity-100 max-h-[800px]"
-          }`}
+          className={`transition-all duration-300 ease-in-out ${isMobile
+            ? isMobileMenuOpen
+              ? "opacity-100 max-h-[400px] mb-2"
+              : "opacity-0 max-h-0 overflow-hidden"
+            : "opacity-100 max-h-[800px]"
+            }`}
         >
           {isMobile && (
             <div className="space-y-2 mt-4 transition-all duration-300 ease-in-out">
@@ -557,77 +558,75 @@ export default function Header({
       </div>
 
       <nav className={`flex scrollbar-hide overflow-x-auto px-1 ${isSearchVisible ? "mt-1" : "mt-2"} md:py-2 items-center`}>
-{categories.map((category, index) => (
-  category.isActive == true && (
-    <NavLink
-      key={index}
-      to={category.categoryNameNoDiacritics === "all" ? "/" : category.categoryNameNoDiacritics}
-      state={{ categoryId: category.categoryId }}
-      className={({ isActive }) =>
-        `flex items-center px-3 py-2 rounded-full transition-all whitespace-nowrap mr-2 border border-[#7ccd7c] ${
-          isActive
-            ? "bg-white text-green-500 shadow-md"
-            : "hover:bg-white/20 md:hover:bg-white/10"
-        }`
-      }
-      onClick={() => {
-        setSelectedCategory(index);
-        setIsMobileMenuOpen(false);
-        handleCategoryClick(category.categoryId);
-      }}
-    >
-      {({ isActive }) => (
-        <>
-          <div
-            className={`w-7 h-7 flex items-center justify-center rounded-full ${
-              isActive ? "bg-green-500" : "bg-white/10"
-            }`}
-          >
-            <img
-              src={category.imageLink}
-              alt={category.categoryName}
-              className="w-5 h-5 object-contain"
-            />
-          </div>
-          <span className="ml-2 text-sm md:text-base">
-            {category.categoryName}
-          </span>
-        </>
-      )}
-    </NavLink>
-  )
-))}
+        {categories.map((category, index) => (
+          category.isActive == true && (
+            <NavLink
+              key={index}
+              to={category.categoryNameNoDiacritics === "all" ? "/" : category.categoryNameNoDiacritics}
+              state={{ categoryId: category.categoryId }}
+              className={({ isActive }) =>
+                `flex items-center px-3 py-2 rounded-full transition-all whitespace-nowrap mr-2 border border-[#7ccd7c] ${isActive
+                  ? "bg-white text-green-500 shadow-md"
+                  : "hover:bg-white/20 md:hover:bg-white/10"
+                }`
+              }
+              onClick={() => {
+                setSelectedCategory(index);
+                setIsMobileMenuOpen(false);
+                handleCategoryClick(category.categoryId);
+              }}
+            >
+              {({ isActive }) => (
+                <>
+                  <div
+                    className={`w-7 h-7 flex items-center justify-center rounded-full ${isActive ? "bg-green-500" : "bg-white/10"
+                      }`}
+                  >
+                    <img
+                      src={category.imageLink}
+                      alt={category.categoryName}
+                      className="w-5 h-5 object-contain"
+                    />
+                  </div>
+                  <span className="ml-2 text-sm md:text-base">
+                    {category.categoryName}
+                  </span>
+                </>
+              )}
+            </NavLink>
+          )
+        ))}
         {showArrow && !isMobile && (
-         <>
-         <button
-            className="absolute left-3 p-2 bg-green-500 text-white rounded transition hover:bg-green-600"
-            onClick={() => {
-              const navElement = document.querySelector('nav');
-              if (navElement) {
-                navElement.scrollBy({
-                  left: -200, // Số pixel để cuộn sang trái
-                  behavior: 'smooth'
-                });
-              }
-            }}
-          >
-            <ArrowRight className="w-4 h-4 transform rotate-180" /> {/* Biểu tượng mũi tên */}
-          </button>
-           <button
-            className="absolute right-3 p-2 bg-green-500 text-white rounded transition hover:bg-green-600"
-            onClick={() => {
-              const navElement = document.querySelector('nav');
-              if (navElement) {
-                navElement.scrollBy({
-                  left: 200, // Số pixel để cuộn sang bên phải
-                  behavior: 'smooth'
-                });
-              }
-            }}
-          >
-            <ArrowRight className="w-4 h-4" /> {/* Biểu tượng mũi tên */}
-          </button>
-         </>
+          <>
+            <button
+              className="absolute left-3 p-2 bg-green-500 text-white rounded transition hover:bg-green-600"
+              onClick={() => {
+                const navElement = document.querySelector('nav');
+                if (navElement) {
+                  navElement.scrollBy({
+                    left: -200, // Số pixel để cuộn sang trái
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              <ArrowRight className="w-4 h-4 transform rotate-180" /> {/* Biểu tượng mũi tên */}
+            </button>
+            <button
+              className="absolute right-3 p-2 bg-green-500 text-white rounded transition hover:bg-green-600"
+              onClick={() => {
+                const navElement = document.querySelector('nav');
+                if (navElement) {
+                  navElement.scrollBy({
+                    left: 200, // Số pixel đ��� cuộn sang bên phải
+                    behavior: 'smooth'
+                  });
+                }
+              }}
+            >
+              <ArrowRight className="w-4 h-4" /> {/* Biểu tượng mũi tên */}
+            </button>
+          </>
         )}
       </nav>
 

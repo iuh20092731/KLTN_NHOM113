@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Table, Button, Space, message, Select, Modal, Dropdown, Input } from 'antd';
-import { EditOutlined, DeleteOutlined, PlusOutlined, SearchOutlined, CloseOutlined, HeartOutlined } from '@ant-design/icons';
+import { EditOutlined, DeleteOutlined, PlusOutlined, SearchOutlined, CloseOutlined, HeartOutlined, QuestionCircleOutlined } from '@ant-design/icons';
 import { useDispatch } from 'react-redux';
 import Breadcrumb from '../Breadcrumbs/Breadcrumb';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -349,10 +349,10 @@ const FrmADList = () => {
                 render: (record: any) => (
                     <div className="space-y-2">
                         {record.googleMapLink && (
-                            <a 
-                                href={record.googleMapLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={record.googleMapLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors"
                             >
                                 <i className="fab fa-google text-red-500"></i>
@@ -360,10 +360,10 @@ const FrmADList = () => {
                             </a>
                         )}
                         {record.websiteLink && (
-                            <a 
-                                href={record.websiteLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={record.websiteLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors"
                             >
                                 <i className="fas fa-globe text-blue-500"></i>
@@ -371,10 +371,10 @@ const FrmADList = () => {
                             </a>
                         )}
                         {record.facebookLink && (
-                            <a 
-                                href={record.facebookLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={record.facebookLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors"
                             >
                                 <i className="fab fa-facebook text-blue-600"></i>
@@ -382,10 +382,10 @@ const FrmADList = () => {
                             </a>
                         )}
                         {record.zaloLink && (
-                            <a 
-                                href={record.zaloLink} 
-                                target="_blank" 
-                                rel="noopener noreferrer" 
+                            <a
+                                href={record.zaloLink}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="flex items-center gap-2 text-blue-500 hover:text-blue-600 transition-colors"
                             >
                                 <i className="fas fa-comment text-blue-500"></i>
@@ -447,6 +447,15 @@ const FrmADList = () => {
                             className="border-red-500 hover:border-red-600 hover:text-red-600"
                         >
                             Yêu thích
+                        </Button>
+                        <Button
+                            type="default"
+                            size="small"
+                            icon={<QuestionCircleOutlined className="text-blue-500" />}
+                            onClick={() => navigate(`/advertisements/${record.advertisementId}/faqs`)}
+                            className="border-blue-500 hover:border-blue-600 hover:text-blue-600"
+                        >
+                            Q&A
                         </Button>
                     </div>
                 ),
@@ -641,7 +650,7 @@ const FrmADList = () => {
                 setCategories(activeCategories);
 
                 // Log để debug
-                console.log('Fetched categories:', activeCategories);
+                // console.log('Fetched categories:', activeCategories);
             }
         } catch (error) {
             console.error('Error fetching categories:', error);
@@ -703,21 +712,21 @@ const FrmADList = () => {
 
     const filterAdvertisements = (service: string | null, category: string | null) => {
         let filtered = [...advertisements];
-        
+
         if (category && category !== 'all') {
-            filtered = filtered.filter(ad => 
-                removeVietnameseTones(ad.categoryNameNoDiacritics.toLowerCase()) === 
+            filtered = filtered.filter(ad =>
+                removeVietnameseTones(ad.categoryNameNoDiacritics.toLowerCase()) ===
                 removeVietnameseTones(category.toLowerCase())
             );
         }
-        
+
         if (service) {
-            filtered = filtered.filter(ad => 
-                removeVietnameseTones(ad.serviceName.toLowerCase()) === 
+            filtered = filtered.filter(ad =>
+                removeVietnameseTones(ad.serviceName.toLowerCase()) ===
                 removeVietnameseTones(service.toLowerCase())
             );
         }
-        
+
         setFilteredAdvertisements(filtered);
     };
 
@@ -739,7 +748,13 @@ const FrmADList = () => {
                 body: JSON.stringify(request)
             });
 
+            const data = await response.json();
+
             if (!response.ok) {
+                if (data.code === 10005) {
+                    message.warning('Quảng cáo này đã có trong danh sách yêu thích');
+                    return;
+                }
                 throw new Error('Failed to add to favorites');
             }
 

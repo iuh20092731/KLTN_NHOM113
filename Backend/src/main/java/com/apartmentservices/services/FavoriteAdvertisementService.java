@@ -3,6 +3,8 @@ package com.apartmentservices.services;
 import com.apartmentservices.dto.request.FavoriteAdvertisementRequest;
 import com.apartmentservices.dto.response.FavoriteAdvertisementResponse;
 import com.apartmentservices.dto.response.MainAdvertisementResponse;
+import com.apartmentservices.exception.AppException;
+import com.apartmentservices.exception.ErrorCode;
 import com.apartmentservices.mapper.FavoriteAdvertisementMapper;
 import com.apartmentservices.mapper.MainAdvertisementMapper;
 import com.apartmentservices.models.FavoriteAdvertisement;
@@ -158,6 +160,12 @@ public class FavoriteAdvertisementService {
 
     @Transactional
     public FavoriteAdvertisementResponse createFavoriteAdvertisement(FavoriteAdvertisementRequest request) {
+        // Kiểm tra xem advertisementId đã tồn tại trong danh sách yêu thích chưa
+        boolean exists = favoriteAdvertisementRepository.existsByAdvertisementIdAndServiceId(request.getAdvertisementId(), request.getServiceId());
+        if (exists) {
+            throw new AppException(ErrorCode.ADVERTISEMENT_ALREADY_FAVORITED); // Sử dụng mã lỗi thích hợp
+        }
+
         // Lấy giá trị lớn nhất của cột `seq` từ cơ sở dữ liệu
         Integer maxSeq = favoriteAdvertisementRepository.findMaxSeq().orElse(0);
 
@@ -173,6 +181,8 @@ public class FavoriteAdvertisementService {
         // Chuyển đổi sang response DTO
         return favoriteAdvertisementMapper.toFavoriteAdvertisementResponse(savedFavorite);
     }
+
+
 
 
     @Transactional(readOnly = true)

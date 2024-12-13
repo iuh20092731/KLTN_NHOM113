@@ -11,12 +11,9 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FAQCreationRequest {
 
-    @NotBlank(message = "QUESTION_REQUIRED")
     String question;
 
-    @NotBlank(message = "ANSWER_REQUIRED")
     String answer;
 
-    @NotBlank(message = "ADVERTISEMENT_ID_REQUIRED")
     Integer advertisementId;
 }

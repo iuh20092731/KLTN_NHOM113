@@ -110,7 +110,7 @@ const ChoThue: React.FC = () => {
   // Hàm để chuyển trang
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
-  // Hàm để chuyển đến trang tiếp theo
+  // Hàm để chuyển đến trang tiếp the
   const nextPage = () => {
     if (currentPage < Math.ceil(realEstateListings.length / itemsPerPage)) {
       setCurrentPage(currentPage + 1);

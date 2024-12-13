@@ -98,7 +98,7 @@ const DropdownUser = () => {
           <span className="block text-sm font-medium text-black dark:text-white">
             {userInfo ? `${userInfo.firstName} ${userInfo.lastName}` : 'Guest'}
           </span>
-          <span className="block text-xs">Admin: {userInfo?.username}</span>
+          <span className="block text-xs">Quản trị viên: {userInfo?.username}</span>
         </span>
 
         <span className="h-12 w-12 rounded-full overflow-hidden">
@@ -154,7 +154,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                My Profile
+                Hồ sơ của tôi
               </Link>
             </li>
             <li>
@@ -175,7 +175,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                My Contacts
+                Danh bạ của tôi
               </Link>
             </li>
             <li>
@@ -200,7 +200,7 @@ const DropdownUser = () => {
                     fill=""
                   />
                 </svg>
-                Account Settings
+                Cài đặt tài khoản
               </Link>
             </li>
           </ul>
@@ -222,7 +222,7 @@ const DropdownUser = () => {
                 fill=""
               />
             </svg>
-            Log Out
+            Đăng xuất
           </button>
         </div>
       )}

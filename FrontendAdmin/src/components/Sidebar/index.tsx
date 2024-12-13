@@ -161,7 +161,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             fill=""
                           />
                         </svg>
-                        Dashboard
+                        Bảng điều khiển
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${open && 'rotate-180'
                             }`}
@@ -386,8 +386,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                 }}
               </SidebarLinkGroup>
               {/* <!-- Menu Item Dashboard --> */}
-{/* <!-- Menu Item Forms --> */}
-<SidebarLinkGroup
+              {/* <!-- Menu Item Forms --> */}
+              <SidebarLinkGroup
                 activeCondition={
                   pathname === '/forms' || pathname.includes('forms')
                 }
@@ -445,7 +445,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           }`}
                       >
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
-                        <li>
+                          <li>
                             <NavLink
                               to="/forms/form-banner"
                               className={({ isActive }) =>
@@ -549,10 +549,9 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                     <React.Fragment>
                       <NavLink
                         to="#"
-                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                          (pathname === '/statistics' || pathname.includes('statistics')) &&
+                        className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${(pathname === '/statistics' || pathname.includes('statistics')) &&
                           'bg-graydark dark:bg-meta-4'
-                        }`}
+                          }`}
                         onClick={(e) => {
                           e.preventDefault();
                           sidebarExpanded ? handleClick() : setSidebarExpanded(true);
@@ -561,7 +560,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                         <svg
                           className="fill-current"
                           width="18"
-                          height="18" 
+                          height="18"
                           viewBox="0 0 18 18"
                           fill="none"
                           xmlns="http://www.w3.org/2000/svg"
@@ -572,14 +571,13 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                           />
                           <path
                             d="M3.88235 14.1176H6.47059V7.76471H3.88235V14.1176ZM7.76471 14.1176H10.3529V3.88235H7.76471V14.1176ZM11.6471 14.1176H14.2353V10.3529H11.6471V14.1176Z"
-                            fill="currentColor"  
+                            fill="currentColor"
                           />
                         </svg>
                         Thống kê lượt truy cập
                         <svg
-                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${
-                            open && 'rotate-180'
-                          }`}
+                          className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${open && 'rotate-180'
+                            }`}
                           width="20"
                           height="20"
                           viewBox="0 0 20 20"
@@ -596,9 +594,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       </NavLink>
                       {/* <!-- Dropdown Menu Start --> */}
                       <div
-                        className={`translate transform overflow-hidden ${
-                          !open && 'hidden'
-                        }`}
+                        className={`translate transform overflow-hidden ${!open && 'hidden'
+                          }`}
                       >
                         <ul className="mt-4 mb-5.5 flex flex-col gap-2.5 pl-6">
                           <li>
@@ -637,9 +634,8 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
               <li>
                 <NavLink
                   to="/profile"
-                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${
-                    pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
-                  }`}
+                  className={`group relative flex items-center gap-2.5 rounded-sm py-2 px-4 font-medium text-bodydark1 duration-300 ease-in-out hover:bg-graydark dark:hover:bg-meta-4 ${pathname.includes('profile') && 'bg-graydark dark:bg-meta-4'
+                    }`}
                 >
                   <svg
                     className="fill-current"
@@ -658,12 +654,12 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                       fill=""
                     />
                   </svg>
-                  Profile
+                  Hồ sơ
                 </NavLink>
               </li>
               {/* <!-- Menu Item Profile --> */}
 
-              
+
               {/* <!-- Menu Item Forms --> */}
 
 
@@ -906,7 +902,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                             </clipPath>
                           </defs>
                         </svg>
-                        Authentication
+                        Xác thực
                         <svg
                           className={`absolute right-4 top-1/2 -translate-y-1/2 fill-current ${open && 'rotate-180'
                             }`}
@@ -939,7 +935,7 @@ const Sidebar = ({ sidebarOpen, setSidebarOpen }: SidebarProps) => {
                               }
                               onClick={handleMenuItemClick}
                             >
-                              Sign In
+                              Đăng nhập
                             </NavLink>
                           </li>
                           {/* <li>

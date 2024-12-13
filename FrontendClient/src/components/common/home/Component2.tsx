@@ -39,7 +39,7 @@ const Component2: React.FC<Component2Props> = ({ serviceId, serviceName }) => {
   };
 
   if (isLoading || advertisement.length === 0) {
-    return <p className="text-center text-gray-500">Đang tải dữ liệu...</p>;
+    return <p className="text-center text-gray-500"></p>;
   }
 
   return (

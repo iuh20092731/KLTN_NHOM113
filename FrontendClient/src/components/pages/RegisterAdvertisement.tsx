@@ -1,5 +1,5 @@
 import { useState, useCallback, useEffect } from "react";
-import { Upload, X, Loader2, Phone } from "lucide-react";
+import { Upload, X, Loader2 } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,8 +16,6 @@ import { createAdvertisement, Media } from "@/redux/thunks/postAdvertisement";
 import { jwtDecode } from "jwt-decode";
 import { validateForm } from "@/utils/formValidationRegisterAdver";
 import { useNavigate } from 'react-router-dom';
-import { contact } from "../../constants";
-import { zalo } from "../../assets/icons";
 import { District } from "@/types/District";
 import { DecodedToken } from "@/types/DecodedToken";
 
@@ -334,32 +332,7 @@ export default function ServiceRegistrationForm() {
           </div>
         </div>
       )}
-
-      {/* Hiển thị thông tin liên lạc với admin nếu người dùng chọn "Liên lạc với admin" */}
-      {selectedOption === "contact" && (
-        <div className="mb-6">
-          <Label htmlFor="contact-info" className="block mb-2 text-justify">
-            Liên hệ để được hỗ trợ
-          </Label>
-          <div className={`flex space-x-2 flex"}`}>
-              <a href={contact.zalo_link} className="group relative p-2 transition duration-300 ease-in-out overflow-hidden" target="_blank">
-                <img src={zalo} alt="Zalo"
-                  className="w-8 h-8 relative z-10 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110"
-                />
-              </a>
-              <a
-              href={`tel:${contact.phone}`}
-              className="group relative p-2 transition duration-300 ease-in-out overflow-hidden"
-            >
-              <Phone className="w-6 h-8 relative z-10 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 text-blue-700" />
-            </a>
-            </div>
-          <p className="text-sm text-gray-600 text-justify">
-            Banner giúp dịch vụ của bạn được quảng cáo nổi bật hơn trên web của chúng tôi, dễ tiếp cận với nhiều khách hàng hơn. <br/>
-            <br/> Số điện thoại: {contact.phone}
-          </p>
-        </div>
-      )}
+     
 
       {/* Hiển thị banner đã tải lên */}
       {banner.length > 0 && (

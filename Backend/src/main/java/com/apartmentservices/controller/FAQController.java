@@ -37,6 +37,16 @@ public class FAQController {
 //                .build();
 //    }
 
+    @Operation(summary = "Create FAQ", description = "Create a new frequently asked question / Tạo một câu hỏi thường gặp mới")
+    @PostMapping
+    public ApiResponse<FAQResponse> createFAQ(@RequestBody @Valid FAQCreationRequest request) {
+        log.info("Request to create FAQ: {}", request);
+        return ApiResponse.<FAQResponse>builder()
+                .result(faqService.createFAQ(request))
+                .build();
+    }
+
+
     @GetMapping
     @Operation(summary = "Get All FAQs", description = "Retrieve a list of all frequently asked questions / Lấy danh sách tất cả các câu hỏi thường gặp")
     ApiResponse<List<FAQResponse>> getFAQs() {
@@ -59,6 +69,29 @@ public class FAQController {
                 .result(faqService.getFAQsByAdvertisementId(advertisementId))
                 .build();
     }
+
+    @PutMapping("/{faqId}")
+    @Operation(summary = "Update FAQ", description = "Update an existing frequently asked question / Cập nhật một câu hỏi thường gặp đã tồn tại")
+    public ApiResponse<FAQResponse> updateFAQ(
+            @PathVariable Integer faqId,
+            @RequestBody @Valid FAQUpdateRequest request) {
+        log.info("Request to update FAQ with ID {}: {}", faqId, request);
+        return ApiResponse.<FAQResponse>builder()
+                .result(faqService.updateFAQ(faqId, request))
+                .build();
+    }
+
+    @DeleteMapping("/{faqId}")
+    @Operation(summary = "Delete FAQ", description = "Delete a frequently asked question by its ID / Xóa một câu hỏi thường gặp theo ID của nó")
+    public ApiResponse<String> deleteFAQ(@PathVariable Integer faqId) {
+        log.info("Request to delete FAQ with ID: {}", faqId);
+        faqService.deleteFAQ(faqId);
+        return ApiResponse.<String>builder()
+                .result("FAQ with ID " + faqId + " has been deleted successfully.")
+                .build();
+    }
+
+
 
 //    @PutMapping("/{faqId}")
 //    @Operation(summary = "Update FAQ", description = "Update an existing frequently asked question / Cập nhật một câu hỏi thường gặp đã tồn tại")

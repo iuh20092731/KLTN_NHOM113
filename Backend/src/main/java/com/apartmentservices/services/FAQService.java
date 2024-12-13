@@ -13,4 +13,12 @@ public interface FAQService {
 //    FAQResponse updateFAQ(Long faqId, FAQUpdateRequest request);
 //    void deleteFAQ(Long faqId);
     List<FAQResponse> getFAQsByAdvertisementId(Integer advertisementId);
+
+    FAQResponse createFAQ(FAQCreationRequest request);
+
+    FAQResponse updateFAQ(Integer faqId, FAQUpdateRequest request);
+
+    void deleteFAQ(Integer faqId);
+
+
 }

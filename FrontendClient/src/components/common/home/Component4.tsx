@@ -37,9 +37,7 @@ const ServiceComponent: React.FC<Component4Props> = ({ serviceId, serviceName })
 
   if (isLoading || advertisement.length === 0) {
     return (
-      <div className="text-center text-gray-500 py-10">
-        Đang tải dữ liệu...
-      </div>
+      <p></p>
     );
   }
 

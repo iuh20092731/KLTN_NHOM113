@@ -4,13 +4,14 @@ import {AppDispatch, RootState } from '@/redux/store';
 import {useDispatch, useSelector } from 'react-redux';
 import { MapPin, Phone } from 'lucide-react';
 import Rating from '../common/Rating';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { fetchSearch } from '@/redux/thunks/search';
 
 const SearchPage: React.FC = () => {
   const dispatch: AppDispatch = useDispatch();
   const [searchParams] = useSearchParams();
   const key = searchParams.get('key');
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(fetchSearch(key || ''));
@@ -60,9 +61,21 @@ const SearchPage: React.FC = () => {
             {search.advertisements.slice(0, visibleCount).map((item: {
               clicks: number;
               reviewCount: number;
-              averageRating: number; advertisementId: React.Key | null | undefined; mediaList: string | any[]; mainAdvertisementName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; detailedDescription: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; phoneNumber: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; address: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; views: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; likes: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              averageRating: number; 
+              advertisementId: React.Key | null | undefined; 
+              mediaList: string | any[]; mainAdvertisementName: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              detailedDescription: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              phoneNumber: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              address: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              views: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              likes: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | Iterable<React.ReactNode> | React.ReactPortal | null | undefined; 
+              category_name_no_diacritics: string | null;
 }) => (
-                <div className="bg-white rounded-lg shadow-md overflow-hidden" key={item.advertisementId}>
+                <div 
+                  className="bg-white rounded-lg shadow-md overflow-hidden cursor-pointer" 
+                  key={item.advertisementId} 
+                  onClick={()=> navigate(`/${item.category_name_no_diacritics}/${item.advertisementId}`)}
+                >
                 {item.mediaList.length > 0 && (
                   <img
                     src={item.mediaList[0].url || ''}

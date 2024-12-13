@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import './style/banner.css';
 import { useNavigate } from 'react-router-dom';
+
 interface Banner {
   bannerId: number;
   title: string | null;
@@ -32,6 +33,14 @@ const BannerComponent: React.FC<BannerProps> = ({ banners }) => {
     .sort((a, b) => a.serial - b.serial);
 
   const handleSlideClick = (linkurl: string) => {
+    if (linkurl === '/registeradvertisement') {
+      const token = localStorage.getItem('token');
+      if (!token) {
+        localStorage.setItem('redirectUrl', '/registeradvertisement');
+        navigate('/login');
+        return;
+      }
+    }
     navigate(linkurl);
   };
 
@@ -58,7 +67,7 @@ const BannerComponent: React.FC<BannerProps> = ({ banners }) => {
           <SwiperSlide key={banner.bannerId}>
             <div 
               className="w-full h-[200px] md:h-[500px] relative rounded-lg overflow-hidden cursor-pointer"
-              onClick={() =>handleSlideClick(banner.linkUrl)}
+              onClick={() => handleSlideClick(banner.linkUrl)}
             >
               <img
                 src={banner.imageUrl}

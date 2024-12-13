@@ -33,6 +33,7 @@ import QuanLyLinkSocial from './components/Categories/QuanLyLinkSocial';
 import QuanLyGocHoiDap from './components/Categories/QuanLyGocHoiDap';
 import FrmADList from './components/Adventiments/FrmADList';
 import FrmFavoriteADList from './components/Adventiments/FrmFavoriteADList';
+import FrmFAQList from './components/FAQ/FrmFAQList';
 
 function App() {
   const [loading, setLoading] = useState<boolean>(true);
@@ -84,7 +85,7 @@ function App() {
     <Routes>
       <Route element={<AuthLayout />}>
         <Route path="/auth/signin" element={<>
-          <PageTitle title="Signin | DichVuHungNgan" /><SignIn /> </>} />
+          <PageTitle title="Đăng nhập | DichVuHungNgan" /><SignIn /> </>} />
         {/* <Route path="/auth/signup" element={<>
           <PageTitle title="Signup | DichVuHungNgan" /><SignUp /></>} /> */}
       </Route>
@@ -107,7 +108,7 @@ function App() {
           path="/calendar"
           element={
             <>
-              <PageTitle title="Calendar | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Lịch | Dịch Vụ Hưng Ngân" />
               <Calendar />
             </>
           }
@@ -116,7 +117,7 @@ function App() {
           path="/profile"
           element={
             <>
-              <PageTitle title="Profile | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Hồ sơ | Dịch Vụ Hưng Ngân" />
               <Profile />
             </>
           }
@@ -188,7 +189,7 @@ function App() {
           path="/settings"
           element={
             <>
-              <PageTitle title="Settings | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Cài đặt | Dịch Vụ Hưng Ngân" />
               <Settings />
             </>
           }
@@ -197,7 +198,7 @@ function App() {
           path="/chart"
           element={
             <>
-              <PageTitle title="Basic Chart | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Biểu đồ | Dịch Vụ Hưng Ngân" />
               <Chart />
             </>
           }
@@ -224,7 +225,7 @@ function App() {
           path="/advertisements/adregisted"
           element={
             <>
-              <PageTitle title="Advertisement Registration | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Đăng ký Quảng cáo | Dịch Vụ Hưng Ngân" />
               <FrmADRegisted />
             </>
           }
@@ -233,7 +234,7 @@ function App() {
           path="/advertisements/create"
           element={
             <>
-              <PageTitle title="Create Advertisement | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Tạo Quảng cáo | Dịch Vụ Hưng Ngân" />
               <FrmADCreate />
             </>
           }
@@ -242,7 +243,7 @@ function App() {
           path="/advertisements/update"
           element={
             <>
-              <PageTitle title="Create Advertisement | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Cập nhật Quảng cáo | Dịch Vụ Hưng Ngân" />
               <FrmADUpdate />
             </>
           }
@@ -251,7 +252,7 @@ function App() {
           path="/advertisements/list"
           element={
             <>
-              <PageTitle title="Advertisement List | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Danh sách Quảng cáo | Dịch Vụ Hưng Ngân" />
               <FrmADList />
             </>
           }
@@ -260,8 +261,17 @@ function App() {
           path="/advertisements/favorites"
           element={
             <>
-              <PageTitle title="Favorite Advertisements | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Quảng cáo Yêu thích | Dịch Vụ Hưng Ngân" />
               <FrmFavoriteADList />
+            </>
+          }
+        />
+        <Route
+          path="/advertisements/:advertisementId/faqs"
+          element={
+            <>
+              <PageTitle title="Quản lý Q&A | Dịch Vụ Hưng Ngân" />
+              <FrmFAQList />
             </>
           }
         />
@@ -270,7 +280,7 @@ function App() {
           path="/accounts/create"
           element={
             <>
-              <PageTitle title="Create Account | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Tạo Tài khoản | Dịch Vụ Hưng Ngân" />
               <CreateAccount />
             </>
           }
@@ -279,7 +289,7 @@ function App() {
           path="/accounts/list"
           element={
             <>
-              <PageTitle title="Account List | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Danh sách Tài khoản | Dịch Vụ Hưng Ngân" />
               <AccountList />
             </>
           }
@@ -288,7 +298,7 @@ function App() {
           path="/statistics/category"
           element={
             <>
-              <PageTitle title="Category Statistics | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Thống kê Danh mục | Dịch Vụ Hưng Ngân" />
               <CategoryStats />
             </>
           }
@@ -297,7 +307,7 @@ function App() {
           path="/statistics/advertisement"
           element={
             <>
-              <PageTitle title="Advertisement Statistics | Dịch Vụ Hưng Ngân" />
+              <PageTitle title="Thống kê Quảng cáo | Dịch Vụ Hưng Ngân" />
               <AdvertisementStats />
             </>
           }

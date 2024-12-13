@@ -1,6 +1,7 @@
 package com.apartmentservices.dto.request;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
@@ -11,15 +12,12 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class FAQUpdateRequest {
 
-    @NotBlank(message = "FAQ_ID_REQUIRED")
-    Integer faqId;
-
     @NotBlank(message = "QUESTION_REQUIRED")
     String question;
 
     @NotBlank(message = "ANSWER_REQUIRED")
     String answer;
 
-    @NotBlank(message = "ADVERTISEMENT_ID_REQUIRED")
+    @NotNull(message = "ADVERTISEMENT_ID_REQUIRED")
     Integer advertisementId;
 }

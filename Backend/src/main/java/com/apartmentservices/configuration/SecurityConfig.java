@@ -142,7 +142,11 @@ public class SecurityConfig {
         corsConfiguration.addAllowedOrigin("https://www.tranquanghuyit09.website");
         corsConfiguration.addAllowedOrigin("https://tranquanghuyit09.website");
         corsConfiguration.addAllowedOrigin("https://apartment-services-dev.vercel.app");
+        corsConfiguration.addAllowedOrigin("https://devadmin.dichvuhungngan.com");
+        corsConfiguration.addAllowedOrigin("https://dev.dichvuhungngan.com");
         corsConfiguration.addAllowedOrigin("https://accounts.google.com");
+        corsConfiguration.addAllowedOrigin("https://devadmin.dichvuhungngan.com");
+        corsConfiguration.addAllowedOrigin("https://dev-admin-apartment-services.vercel.app");
 //        corsConfiguration.setAllowCredentials(true);
 //        corsConfiguration.addAllowedOrigin("*");
 //        corsConfiguration.addAllowedMethod("*");

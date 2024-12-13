@@ -1,6 +1,6 @@
 import { FormInput } from "@/components/common/FormInput";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
 import { AppDispatch, RootState } from "@/redux/store";
 import { login, loginWithFacebook, loginWithGoogle } from "@/redux/thunks/auth";
@@ -15,6 +15,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 import { LoginSocialFacebook } from "reactjs-social-login";
+// import { CustomSuccessToast } from "../common/CustomSuccessToast";
 
 export default function LoginPage() {
   const [formData, setFormData] = useState<Credentials>({
@@ -45,15 +46,21 @@ export default function LoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     try {
       CredentialsSchema.parse(formData);
       const resultAction = await dispatch(login(formData));
       if (login.fulfilled.match(resultAction)) {
         const userInfoAction = await dispatch(getUserInfo());
+        // console.log("userInfoAction", userInfoAction);
         if (getUserInfo.fulfilled.match(userInfoAction)) {
-          toast({ description: "Đăng nhập thành công." });
-          navigate(redirectUrl || "/")
+          toast({
+            title: "Đăng nhập thành công!",
+            description: `Chào mừng ${userInfoAction.payload.result.firstName} ${userInfoAction.payload.result.lastName} quay trở lại 👋`,
+            duration: 5000,
+            variant: "default"
+          });
+          navigate(redirectUrl || "/");
           if (rememberMe) {
             localStorage.setItem("userCredentials", JSON.stringify(formData));
           } else {
